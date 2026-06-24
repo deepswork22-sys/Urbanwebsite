@@ -1,15 +1,16 @@
 import Navbar from "../components/site/Navbar";
 import Footer from "../components/site/Footer";
 import ReservationForm from "../components/site/ReservationForm";
-import MenuPreview from "../components/site/MenuPreview";
 import { ArrowDown, MapPin, Star, Sparkles, Coffee, Flower2, PartyPopper, Baby } from "lucide-react";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1759219782028-d47f7ce44f61?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxmYWNhZGUlMjByZXN0YXVyYW50JTIwbmlnaHQlMjBleHRlcmlvcnxlbnwwfHx8fDE3ODIzMzUzOTV8MA&ixlib=rb-4.1.0&q=85";
-const CAFE_IMG = "https://images.unsplash.com/photo-1768051297672-2d17db1b9e09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBjYWZlJTIwaW50ZXJpb3IlMjBtb29keSUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4MjMzNTM4NHww&ixlib=rb-4.1.0&q=85";
-const PILATES_IMG = "https://images.pexels.com/photos/35553893/pexels-photo-35553893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+// Real photos of The Urban Bungalow, Patna
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_bungalow-cafe-2/artifacts/rd9pn4jv_unnamed.webp"; // facade
+const CAFE_IMG = "https://customer-assets.emergentagent.com/job_bungalow-cafe-2/artifacts/bpn8kc0i_unnamed%20%281%29.webp"; // cafe interior with arches
+const PILATES_IMG = "https://customer-assets.emergentagent.com/job_bungalow-cafe-2/artifacts/hhmm7pc7_unnamed%20%282%29.webp"; // pilates studio
+const INSIDE_IMG = "https://customer-assets.emergentagent.com/job_bungalow-cafe-2/artifacts/bpn8kc0i_unnamed%20%281%29.webp"; // arched alcoves interior
+const FACADE_IMG = "https://customer-assets.emergentagent.com/job_bungalow-cafe-2/artifacts/rd9pn4jv_unnamed.webp"; // facade for inside-strip second tile
 const BANQUET_IMG = "https://images.pexels.com/photos/12688995/pexels-photo-12688995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 const PLAYZONE_IMG = "https://images.pexels.com/photos/9821661/pexels-photo-9821661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-const INSIDE_IMG = "https://images.pexels.com/photos/12530856/pexels-photo-12530856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const SPACES = [
     {
@@ -57,8 +58,8 @@ export default function Home() {
 
             {/* HERO */}
             <section className="relative h-screen min-h-[760px] overflow-hidden" data-testid="hero-section">
-                <img src={HERO_IMG} alt="The Urban Bungalow facade at night" className="absolute inset-0 w-full h-full object-cover scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0B120E]/40 via-[#0B120E]/55 to-[#0B120E]" />
+                <img src={HERO_IMG} alt="The Urban Bungalow facade" className="absolute inset-0 w-full h-full object-cover object-bottom scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0B120E]/85 via-[#0B120E]/65 to-[#0B120E]" />
                 <div className="absolute inset-0 flex items-end pb-24 md:pb-32">
                     <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
                         <p className="fade-up text-[11px] tracking-luxe uppercase text-[#C8A97E] mb-6 flex items-center gap-3">
@@ -186,14 +187,11 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="md:col-span-7 grid grid-cols-2 gap-4">
-                        <img src={INSIDE_IMG} alt="Cafe interior" className="w-full h-72 object-cover" />
-                        <img src={CAFE_IMG} alt="Cafe seating" className="w-full h-72 object-cover translate-y-8" />
+                        <img src={INSIDE_IMG} alt="Cafe interior with arched alcoves" className="w-full h-72 object-cover" />
+                        <img src={FACADE_IMG} alt="The Urban Bungalow facade" className="w-full h-72 object-cover translate-y-8" />
                     </div>
                 </div>
             </section>
-
-            {/* MENU */}
-            <MenuPreview />
 
             {/* RESERVE */}
             <section id="reserve" className="relative py-32 px-6 lg:px-12 bg-[#0B120E]" data-testid="reserve-section">

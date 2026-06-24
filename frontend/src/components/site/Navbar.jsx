@@ -18,7 +18,6 @@ export default function Navbar() {
                 </Link>
                 <div className="hidden md:flex items-center gap-10 text-xs tracking-luxe uppercase text-[#A3A59E]">
                     <a href="#spaces" className="hover:text-[#C8A97E] transition-colors" data-testid="nav-spaces">Spaces</a>
-                    <a href="#menu" className="hover:text-[#C8A97E] transition-colors" data-testid="nav-menu">Menu</a>
                     <a href="#reserve" className="hover:text-[#C8A97E] transition-colors" data-testid="nav-reserve">Reserve</a>
                     <a href="#visit" className="hover:text-[#C8A97E] transition-colors" data-testid="nav-visit">Visit</a>
                 </div>
