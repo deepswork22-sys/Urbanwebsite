@@ -1,0 +1,134 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Luxury)",
+  "design_philosophy": "Deep moody, cinematic, and expensive. Combining a 'nocturne' aesthetic with dark forest greens, charcoal, and warm brass/gold accents. This is a luxe café and lifestyle hub that feels like an exclusive, old-money establishment. The marketing side uses editorial asymmetry and large photography with dark overlays, while the admin dashboard translates this luxury into a high-contrast 'command center'.",
+  "colors": {
+    "background_primary": "#0B120E",
+    "background_secondary": "#151F19",
+    "background_tertiary": "#1C2720",
+    "accent_primary": "#C8A97E",
+    "accent_secondary": "#A68658",
+    "text_primary": "#FDFBF7",
+    "text_secondary": "#A3A59E",
+    "border_subtle": "rgba(200, 169, 126, 0.15)",
+    "border_strong": "rgba(200, 169, 126, 0.4)",
+    "status": {
+      "success": "#2E7D53",
+      "warning": "#C8A97E",
+      "error": "#9E3232",
+      "info": "#4A7A8C"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "'Cormorant Garamond', serif",
+      "body": "'Outfit', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter leading-none text-[#FDFBF7]",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-[#FDFBF7]",
+      "h3": "text-2xl md:text-3xl font-medium tracking-normal text-[#C8A97E]",
+      "h4": "text-xl font-medium tracking-wide uppercase text-[#FDFBF7]",
+      "body": "text-base md:text-lg font-light leading-relaxed text-[#A3A59E]",
+      "small_label": "text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-[#C8A97E]"
+    }
+  },
+  "layout_and_spacing": {
+    "marketing_strategy": "Generous spacing (p-12, p-24, py-32). The 'Tetris' Bento Grid (Mode A) for the spaces showcase to create visual tension and artful asymmetry. Large hero images must have a max black/50 or black/60 overlay to ensure text readability without killing the image.",
+    "dashboard_strategy": "The 'Control Room' Grid (Mode B). Dense but breathable. Cards use #151F19 background with a delicate 1px border of #C8A97E/15. Subtle lift on hover.",
+    "spacing_scale": "Tailwind standard, utilizing py-24 to py-32 for main marketing sections.",
+    "border_radius": "Subtle. rounded-none for a purely editorial look, or maximum rounded-md (6px) for softer luxury."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#C8A97E] text-[#0B120E] hover:bg-[#A68658] transition-colors rounded-none px-8 py-4 font-medium uppercase tracking-widest text-sm",
+      "secondary": "bg-transparent border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E]/10 transition-colors rounded-none px-8 py-4 font-medium uppercase tracking-widest text-sm"
+    },
+    "cards": {
+      "marketing": "bg-[#151F19] border border-white/5 p-8 transition-transform hover:-translate-y-1 duration-500",
+      "dashboard": "bg-[#151F19] border border-[#C8A97E]/15 rounded-md p-6 shadow-2xl"
+    },
+    "inputs_and_forms": {
+      "style": "bg-transparent border-b border-[#C8A97E]/30 rounded-none px-0 py-3 text-[#FDFBF7] focus:ring-0 focus:border-[#C8A97E] placeholder:text-[#A3A59E]/50 transition-colors"
+    },
+    "navigation": {
+      "style": "fixed w-full z-50 backdrop-blur-xl bg-[#0B120E]/80 border-b border-[#C8A97E]/10"
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-500 ease-in-out",
+    "hover_effects": "Subtle brightness shifts, slow image scaling (1.05x) within hidden overflow containers, and text color transitions."
+  },
+  "pages": {
+    "landing": {
+      "hero": "Full viewport height. Background image of the facade/interior with a moody overlay. Large serif text: 'One place. Many stories.'",
+      "spaces_showcase": "Asymmetric bento grid highlighting Urban Café, Pilates Studio, PlayZone, and Banquet. Each section uses high-quality imagery and minimal text.",
+      "menu_preview": "Editorial two-column list. Minimalist typography for item names, separated by a subtle dotted line or space from the price.",
+      "reservation": "Dark, sleek form on a #151F19 background card. Emphasize date/time and guest count inputs.",
+      "footer": "Deep padding (py-32), large brand logo, subtle social links."
+    },
+    "staff_login": {
+      "layout": "Centered card on a dark green background. Input fields as described in components. Primary button for login.",
+      "route": "/staff"
+    },
+    "admin_dashboard": {
+      "layout": "Sidebar navigation (Reservations, Menu, Settings) + Main content area. Dark theme maintained.",
+      "table": "Shadcn UI table customized with #151F19 backgrounds, #C8A97E text for headers, and subtle borders. Status badges use distinct but muted luxury colors (e.g., Gold for confirmed, Gray for pending)."
+    }
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1759219782028-d47f7ce44f61?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxmYWNhZGUlMjByZXN0YXVyYW50JTIwbmlnaHQlMjBleHRlcmlvcnxlbnwwfHx8fDE3ODIzMzUzOTV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Facade restaurant at night",
+        "category": "hero_background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1768051297672-2d17db1b9e09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBjYWZlJTIwaW50ZXJpb3IlMjBtb29keSUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4MjMzNTM4NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Luxury cafe interior with chandeliers",
+        "category": "urban_cafe_showcase"
+      },
+      {
+        "url": "https://images.pexels.com/photos/12530856/pexels-photo-12530856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Chic cafe interior moody",
+        "category": "inside_gallery_1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1550731358-491ded4af838?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxsYXR0ZSUyMGFydCUyMG1vb2R5JTIwbGlnaHRpbmd8ZW58MHx8fHwxNzgyMzM1Mzk1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Person holding cup of cappuccino",
+        "category": "menu_preview_image"
+      },
+      {
+        "url": "https://images.pexels.com/photos/35553893/pexels-photo-35553893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Woman performing Pilates on a reformer machine",
+        "category": "pilates_studio_showcase"
+      },
+      {
+        "url": "https://images.pexels.com/photos/12688995/pexels-photo-12688995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Luxurious banquet hall setup with elegant chandeliers",
+        "category": "banquet_showcase"
+      },
+      {
+        "url": "https://images.pexels.com/photos/9821661/pexels-photo-9821661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Child playing a video game in an arcade, dark moody",
+        "category": "playzone_showcase"
+      },
+      {
+        "url": "https://images.pexels.com/photos/4046683/pexels-photo-4046683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Textured abstract image with gold and green hues",
+        "category": "background_texture_accent"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure all interactive elements have data-testid attributes.",
+    "Use Lucide React for icons (stroke-width 1.5 for elegance).",
+    "Do NOT use 'Inter' for headings. Use Cormorant Garamond or a similar elegant serif.",
+    "Ensure the hero image has an explicit bg-black/60 overlay applied over it to keep the white/cream text legible.",
+    "Admin dashboard should not look like standard Vercel/Stripe. Keep the deep green #0B120E background and use #C8A97E (gold) for primary accents/buttons.",
+    "Implement simple JWT auth for the /staff route, protecting the admin dashboard.",
+    "Use raw HTML/Tailwind for marketing layout asymmetry, but heavily customized Shadcn components for forms, inputs, tables, and dialogs.",
+    "Avoid standard 'cards' with heavy box shadows in the marketing site; opt for flat editorial structures separated by whitespace or delicate 1px lines."
+  ]
+}
