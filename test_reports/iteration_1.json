@@ -1,0 +1,32 @@
+{
+  "summary": "First-finish smoke test for The Urban Bungalow. All 14 backend endpoints and 7 frontend flows tested end-to-end against public preview URL. Everything works including JWT auth, reservation creation, admin reservation list, status PATCH, stats, logout, route protection, and toast feedback.",
+  "tested_scope": ["frontend", "backend", "auth", "integration"],
+  "passed": [
+    "GET /api/ -> 200 with API message",
+    "POST /api/reservations valid body -> 201, status=pending, Café unicode preserved",
+    "POST /api/reservations invalid body -> 422",
+    "POST /api/auth/login (owner@urbanbungalow.com / Owner@2026) -> 200, returns {token, user{role:admin}}",
+    "POST /api/auth/login wrong password -> 401",
+    "GET /api/auth/me with Bearer token -> 200 returns admin user",
+    "GET /api/auth/me without token -> 401",
+    "GET /api/admin/reservations with token -> 200, reservations array",
+    "GET /api/admin/reservations without token -> 401",
+    "PATCH /api/admin/reservations/{id} status=confirmed -> 200, status updated",
+    "PATCH /api/admin/reservations/{id} invalid status -> 400",
+    "PATCH /api/admin/reservations/{nonexistent} -> 404",
+    "GET /api/admin/stats -> 200 returns {total, today, pending, confirmed, seated, cancelled, no-show}",
+    "POST /api/auth/logout -> 200 {ok:true}",
+    "Frontend home loads with hero 'One place. Many stories.', menu preview, reservation form",
+    "Reservation form submit via UI (data-testid res-*) -> success toast + reservation appears in admin",
+    "/admin without auth correctly redirects to /staff",
+    "/staff login with seeded creds -> redirects to /admin, dashboard renders rows + stats + filters",
+    "Status dropdown (status-btn -> set-status-{id}-seated) updates row to SEATED with 'Marked seated' toast",
+    "Sign out from /admin returns user to /staff"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100% (14/14)", "frontend": "100% (7/7)"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Console shows expected 401s on initial /api/auth/me probe when not logged in (handled gracefully by AuthContext). Cross-site cookie + localStorage Bearer fallback both functional. Admin dashboard uses custom dropdown (not Radix Select) with testids data-testid='status-btn-{id}' and 'set-status-{id}-{status}'."
+}
