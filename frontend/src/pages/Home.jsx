@@ -28,8 +28,8 @@ const SPACES = [
         body: "Reformer-led Pilates in a light-filled studio. Because you had us at Pilates.",
         img: PILATES_IMG,
         icon: Flower2,
-        span: "md:col-span-5",
-        height: "h-[340px]",
+        span: "md:col-span-5 md:row-span-1",
+        height: "h-[340px] md:h-full",
     },
     {
         kicker: "Gather & Celebrate",
@@ -37,8 +37,8 @@ const SPACES = [
         body: "A flexible candle-lit space for birthdays, brunches and big moments.",
         img: BANQUET_IMG,
         icon: PartyPopper,
-        span: "md:col-span-5",
-        height: "h-[340px]",
+        span: "md:col-span-5 md:row-span-1",
+        height: "h-[340px] md:h-full",
     },
     {
         kicker: "Little Adventurers",
@@ -46,8 +46,8 @@ const SPACES = [
         body: "A safe, imaginative corner where the kids can be loud while you slow down.",
         img: PLAYZONE_IMG,
         icon: Baby,
-        span: "md:col-span-12",
-        height: "h-[420px]",
+        span: "md:col-span-12 md:row-span-1",
+        height: "h-[420px] md:h-full",
     },
 ];
 
@@ -141,7 +141,7 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="grid md:grid-cols-12 md:auto-rows-[260px] gap-4">
+                    <div className="grid md:grid-cols-12 md:auto-rows-[300px] gap-4">
                         {SPACES.map((s) => {
                             const Icon = s.icon;
                             return (
