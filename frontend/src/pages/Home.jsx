@@ -219,30 +219,71 @@ export default function Home() {
 
             {/* VISIT */}
             <section id="visit" className="relative py-32 px-6 lg:px-12 bg-[#151F19]" data-testid="visit-section">
-                <div className="max-w-7xl mx-auto text-center">
-                    <p className="text-[11px] tracking-luxe uppercase text-[#C8A97E] mb-4">Find us</p>
-                    <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-tight">
-                        Drop by the<br /><em className="italic text-[#C8A97E] not-italic font-serif-display">bungalow.</em>
-                    </h2>
-                    <div className="mt-12 flex flex-wrap justify-center gap-4">
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=The+Urban+Bungalow+Rajendra+Nagar+Patna"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="bg-[#C8A97E] hover:bg-[#A68658] text-[#0B120E] px-8 py-4 text-xs tracking-luxe uppercase font-medium transition-colors"
-                            data-testid="visit-directions"
-                        >
-                            Get Directions
-                        </a>
-                        <a
-                            href="https://wa.me/919942967016"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="border border-[#C8A97E]/60 hover:border-[#C8A97E] hover:bg-[#C8A97E]/10 text-[#C8A97E] px-8 py-4 text-xs tracking-luxe uppercase font-medium transition-colors"
-                            data-testid="visit-whatsapp"
-                        >
-                            WhatsApp Us
-                        </a>
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <p className="text-[11px] tracking-luxe uppercase text-[#C8A97E] mb-4">Find us</p>
+                        <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-tight">
+                            Drop by the<br /><em className="italic text-[#C8A97E] not-italic font-serif-display">bungalow.</em>
+                        </h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-12 gap-10 items-stretch">
+                        {/* Map */}
+                        <div className="md:col-span-8 relative group border border-[#C8A97E]/20 overflow-hidden" data-testid="visit-map">
+                            <iframe
+                                title="The Urban Bungalow location"
+                                src="https://www.google.com/maps?q=The+Urban+Bungalow+Rajendra+Nagar+Patna&output=embed"
+                                className="w-full h-[440px] md:h-[520px] grayscale-[40%] contrast-[1.05] brightness-[0.85] transition-all duration-700 group-hover:grayscale-0 group-hover:brightness-100"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                allowFullScreen
+                            />
+                            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-[#C8A97E]/20" />
+                        </div>
+
+                        {/* Details + actions */}
+                        <div className="md:col-span-4 bg-[#0B120E] border border-[#C8A97E]/15 p-8 md:p-10 flex flex-col justify-between">
+                            <div className="space-y-8">
+                                <div>
+                                    <p className="text-[10px] tracking-luxe uppercase text-[#C8A97E] mb-2">Address</p>
+                                    <p className="font-serif-display text-xl text-[#FDFBF7] leading-snug">
+                                        House no. 77,<br />Rajendra Nagar Road 8,<br />Patna-16, Bihar 800016
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] tracking-luxe uppercase text-[#C8A97E] mb-2">Hours</p>
+                                    <p className="font-serif-display text-lg text-[#FDFBF7]">1:00 PM — 1:00 AM</p>
+                                    <p className="text-xs text-[#A3A59E] mt-1">Open daily</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] tracking-luxe uppercase text-[#C8A97E] mb-2">Call</p>
+                                    <a href="tel:+919942967016" className="font-serif-display text-lg text-[#FDFBF7] hover:text-[#C8A97E] transition-colors">
+                                        099429 67016
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="mt-10 pt-8 border-t border-[#C8A97E]/15 flex flex-col gap-3">
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=The+Urban+Bungalow+Rajendra+Nagar+Patna"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="bg-[#C8A97E] hover:bg-[#A68658] text-[#0B120E] px-6 py-3.5 text-[11px] tracking-luxe uppercase font-medium transition-colors text-center"
+                                    data-testid="visit-directions"
+                                >
+                                    Get Directions
+                                </a>
+                                <a
+                                    href="https://wa.me/919942967016"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="border border-[#C8A97E]/60 hover:border-[#C8A97E] hover:bg-[#C8A97E]/10 text-[#C8A97E] px-6 py-3.5 text-[11px] tracking-luxe uppercase font-medium transition-colors text-center"
+                                    data-testid="visit-whatsapp"
+                                >
+                                    WhatsApp Us
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
