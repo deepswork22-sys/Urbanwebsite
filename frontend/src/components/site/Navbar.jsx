@@ -13,7 +13,7 @@ export default function Navbar() {
                         The Urban Bungalow
                     </span>
                     <span className="hidden md:inline text-[10px] tracking-luxe uppercase text-[#C8A97E]">
-                        Patna · est. 2024
+                        Patna · est. 2026
                     </span>
                 </Link>
                 <div className="hidden md:flex items-center gap-10 text-xs tracking-luxe uppercase text-[#A3A59E]">
