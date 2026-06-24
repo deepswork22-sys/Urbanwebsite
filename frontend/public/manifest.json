@@ -1,0 +1,15 @@
+{
+    "short_name": "Urban Bungalow",
+    "name": "The Urban Bungalow — Patna",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#0B120E",
+    "background_color": "#0B120E"
+}

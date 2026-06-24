@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark forest green tile with subtle rounded corners -->
+  <rect width="64" height="64" rx="10" fill="#0B120E"/>
+  <!-- Inner brass border for luxe feel -->
+  <rect x="3" y="3" width="58" height="58" rx="8" fill="none" stroke="#C8A97E" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Bungalow arch monogram -->
+  <g stroke="#C8A97E" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <!-- Big arch -->
+    <path d="M14 48 L14 30 Q14 14 32 14 Q50 14 50 30 L50 48" />
+    <!-- Floor line -->
+    <line x1="10" y1="50" x2="54" y2="50" />
+  </g>
+
+  <!-- Inner small arch (door) -->
+  <path d="M26 48 L26 38 Q26 30 32 30 Q38 30 38 38 L38 48 Z"
+        fill="#C8A97E" opacity="0.95"/>
+
+  <!-- Sparkle / star above arch (luxe accent) -->
+  <circle cx="32" cy="9" r="1.4" fill="#C8A97E"/>
+</svg>
